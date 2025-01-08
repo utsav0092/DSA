@@ -10,3 +10,5 @@ if __name__ == "__main__":
     recursion = Recursion()
     num = int(input("Enter the number: "))
     print("The sum is:", recursion.sum(num))
+
+'''GFG solution'''

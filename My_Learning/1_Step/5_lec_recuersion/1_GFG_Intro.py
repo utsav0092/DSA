@@ -1,12 +1,13 @@
-# def sum(n):
-#     if n == 0:
-#         return 0
-#     else:
-#         return n + sum(n-1)
+'''Basic start of the Recursion'''
+def sum(n):
+    if n == 0:
+        return 0
+    else:
+        return n + sum(n-1)
 
-# if __name__ == "__main__":
-#     num = int(input("Enter the number : "))
-#     print(sum(num)) 
+if __name__ == "__main__":
+    num = int(input("Enter the number : "))
+    print(sum(num)) 
 
 '''GFG print the number from 1 to n using recursion'''
 class Recursion:
