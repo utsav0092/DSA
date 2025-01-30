@@ -1,16 +1,17 @@
 '''GFG my code for bubble sort'''
 '''Time Complexity is O(n^2)'''
-# def bubbleSort(arr):
-#     for i in range(len(arr)):
-#         for j in range(i+1, len(arr)):
-#             if (arr[i] >= arr[j]):
-#                 arr[i], arr[j] = arr[j], arr[i]
-#     return arr
 
-# if __name__ == "__main__":
-#     arr = [2,1,2,3,4,5,6,3,4,5,6,7,8,9,2,10,1]
-#     print(f"Before sorting: {arr}")
-#     print(f"After sorting: {bubbleSort(arr)}")  
+def bubbleSort(arr):
+    for i in range(len(arr)):
+        for j in range(i+1, len(arr)):
+            if (arr[i] >= arr[j]):
+                arr[i], arr[j] = arr[j], arr[i]
+    return arr
+
+if __name__ == "__main__":
+    arr = [2,1,2,3,4,5,6,3,4,5,6,7,8,9,2,10,1]
+    print(f"Before sorting: {arr}")
+    print(f"After sorting: {bubbleSort(arr)}")  
 
 '''Striver approach'''
 '''Time Complexity O(n)'''

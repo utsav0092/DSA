@@ -1,4 +1,5 @@
 '''GFG solution for Insertion sort using python'''
+
 def insertion(arr):
     n = len(arr)
     for i in range(1, n): # 1 to n-1

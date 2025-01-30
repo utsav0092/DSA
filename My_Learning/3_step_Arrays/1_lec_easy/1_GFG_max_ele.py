@@ -10,6 +10,8 @@ print(f"Max Element is: {findMax(arr)}")
 
 '''Without using sort'''
 
+'''Optimised TC = O(n) and SC = O(n)'''
+
 def findMax(arr):
     m = arr[0]
     for i in range(len(arr)):
