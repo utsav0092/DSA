@@ -1,14 +1,27 @@
 # '''GFG - find the union of two arrays'''
 
-# def Union(nums1, nums2):
-#     c = a.union(b)
-#     return c
+class Solution:
+    
+    # Function to return a list containing the union of the two arrays.
+    def findUnion(self, a, b):
+        # Create a set to store the union elements.
+        union_set = set()
+        
+        # Add elements from both arrays to the set.
+        for element in a:
+            union_set.add(element)
+        for element in b:
+            union_set.add(element)
+        
+        # Convert the set to a sorted list and return it.
+        return sorted(union_set)
 
-# nums1 = [1, 2, 3, 4, 5]
-# nums2 = [4, 5, 6, 7, 8]
-# a = set(nums1)
-# b = set(nums2)
-# print(Union(nums1, nums2))
+# Example usage:
+a = [1, 2, 3, 4, 5]
+b = [1, 2, 3, 6, 7]
+solution = Solution()
+print(solution.findUnion(a, b))
+
 
 # '''My solution'''
 
@@ -76,43 +89,43 @@
 # l2 = [1, 2, 3, 4, 5, 6, 7, 8, -1, -3]
 # print(value(l1, l2))
 
-def union_sorted_arrays(a, b):
-    i, j = 0, 0
-    result = []
+# def union_sorted_arrays(a, b):
+#     i, j = 0, 0
+#     result = []
     
-    while i < len(a) and j < len(b):
-        # If current element of a[] is smaller than current element of b[]
-        if a[i] < b[j]:
-            if len(result) == 0 or a[i] != result[-1]:
-                result.append(a[i])
-            i += 1
-        # If current element of b[] is smaller than current element of a[]
-        elif a[i] > b[j]:
-            if len(result) == 0 or b[j] != result[-1]:
-                result.append(b[j])
-            j += 1
-        else:
-            # If a[i] == b[j], add any one of them and move both pointers
-            if len(result) == 0 or a[i] != result[-1]:
-                result.append(a[i])
-            i += 1
-            j += 1
+#     while i < len(a) and j < len(b):
+#         # If current element of a[] is smaller than current element of b[]
+#         if a[i] < b[j]:
+#             if len(result) == 0 or a[i] != result[-1]:
+#                 result.append(a[i])
+#             i += 1
+#         # If current element of b[] is smaller than current element of a[]
+#         elif a[i] > b[j]:
+#             if len(result) == 0 or b[j] != result[-1]:
+#                 result.append(b[j])
+#             j += 1
+#         else:
+#             # If a[i] == b[j], add any one of them and move both pointers
+#             if len(result) == 0 or a[i] != result[-1]:
+#                 result.append(a[i])
+#             i += 1
+#             j += 1
 
-    # Include remaining elements of a[]
-    while i < len(a):
-        if len(result) == 0 or a[i] != result[-1]:
-            result.append(a[i])
-        i += 1
+#     # Include remaining elements of a[]
+#     while i < len(a):
+#         if len(result) == 0 or a[i] != result[-1]:
+#             result.append(a[i])
+#         i += 1
 
-    # Include remaining elements of b[]
-    while j < len(b):
-        if len(result) == 0 or b[j] != result[-1]:
-            result.append(b[j])
-        j += 1
+#     # Include remaining elements of b[]
+#     while j < len(b):
+#         if len(result) == 0 or b[j] != result[-1]:
+#             result.append(b[j])
+#         j += 1
 
-    return result
+#     return result
 
-# Example usage:
-a = [1, 2, 2, 3]
-b = [2, 3, 4, 4, 5]
-print(union_sorted_arrays(a, b))  # Output: [1, 2, 3, 4, 5]
+# # Example usage:
+# a = [1, 2, 2, 3]
+# b = [2, 3, 4, 4, 5]
+# print(union_sorted_arrays(a, b))  # Output: [1, 2, 3, 4, 5]
