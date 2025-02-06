@@ -50,14 +50,26 @@ def Intersection(arr1, arr2):
     res = list(res)
     return res
     # ------------
-    res = set()
-    for i in range(len(arr1)):
-        if arr1[i] in arr2:
-            res.add(arr1[i])
-        else:
-            continue
-    return res
+    # res = set()
+    # for i in range(len(arr1)):
+    #     if arr1[i] in arr2:
+    #         res.add(arr1[i])
+    #     else:
+    #         continue
+    # return res
 
 arr1 = [1,2,3,4,5]
 arr2 = [2,3,4,5,6]
 print(Intersection(arr1, arr2))
+
+'''
+def intersection(self, nums1, nums2):
+        nums2_set = set(nums2)  # Convert nums2 to a set for O(1) lookups
+        res = []
+        seen = set()  # Track added elements to maintain order efficiently
+        for num in nums1:
+            if num in nums2_set and num not in seen:
+                res.append(num)
+                seen.add(num)  # Mark as added to avoid duplicates
+        return res
+'''
