@@ -26,7 +26,7 @@ if __name__ == "__main__":
 
 def findMissing(arr):
     n = len(arr)
-    e_sum = n * (n+1) // 2
+    e_sum = n * (n + 1) // 2
     a_sum = sum(arr)
     missing = e_sum - a_sum
     if n > 1:
@@ -35,11 +35,6 @@ def findMissing(arr):
         return 1
     else:
         return 0
-    #-------------------
-    # arr = sorted(arr)
-    # for i in range(len(arr)+1):
-    #     if i not in arr:
-    #         return i
 
 def main():
     arr = [1,2,4]

@@ -100,3 +100,83 @@ arr = [2, 3, 2, 3, 5]
 solution = Solution()
 solution.frequencyCount(arr)
 print("Updated array with frequencies:", arr)  # Output: [2, 2, 0, 0, 1]
+
+'''--------------------------------------------------------------------------------------------------'''
+
+# What are the hashable and what are not ?
+'''
+Hashables (Immutables)
+
+1.Strings
+2.Integers
+3.Tuples {1,2,3,4,5}
+-----------------------
+Not hashables (Mutables)
+
+1.Array (Dynamic arrays)
+2.Dictionaries (they themselves are hashmaps)
+'''
+
+"""Hash Sets"""
+
+s = set()
+print(s)
+#add the items in the set
+s.add(1)
+s.add(2)
+s.add(3)
+print(s)
+#Lookup if the item in the set - O(1)
+if 1 in s:
+    print(True)
+else:
+    print(False)
+if 1 not in s:
+    print(True)
+else:
+    print(False)
+#remove the items
+s.remove(3)
+print(s)
+
+string = 'aaaaaaaabbbbbbbbbccccccccccccdddddddddddddd'
+sett = set(string) #set contruction - O(s) - s is the length of the string
+print(sett)
+if 'a' in sett:
+    print(True)
+# looping over items in set - O(n)
+for i in sett:
+    print(i, end="")
+sett.remove('b')
+print()
+print(sett)
+
+'''Hashmaps'''
+
+d = {"greg" : 1, "stieve" : 2, "rob" : 3}
+print(d)
+# add a key-value - O(1)
+d["ash"] = 4
+print(d)
+#checking the items/keys - O(1)
+if 'ash' in d:
+    print(True)
+#Check the value correspoinding to a key in the dictionary - O(1)
+print(d["ash"])
+if d["greg"] == 1:
+    print(True)
+# Looping over the key:value pairs of the dictionary - O(n)
+for key, value in d.items():
+    print(f"Key: '{key}', Value: {value}")
+
+# Defaultdict
+from collections import defaultdict
+from collections import Counter
+
+# default = defaultdict(int)
+default = defaultdict(list)
+print(default[2]) # it will return 0
+print(default) # defaultdict(int, {2:0}) ``
+string = 'aaaaaaaaaabbbbbbbbbbbbbbcccccccddddd'
+counter = Counter(string)
+print(counter)
