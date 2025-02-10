@@ -1,5 +1,6 @@
 '''GFG - Longest subarray with sum k'''
 '''Brute force solution tc - O(n^3) and sc - O(1)'''
+'''Brute force solution of the best case tc - O(n^2) and sc - O(1)'''
 
 # def subArray(arr, k):
 #     n = len(arr)
@@ -25,12 +26,17 @@
 
 #---------------------------------------------------
 
-'''Better apraoch'''
+'''Better apraoch (prefixsum)'''
 '''tc - O() and sc - O()'''
 
 def subArray(arr, k):
     n = len(arr)
-    return n
+    # first part of the problem
+    prefixSum = []
+    prefixSum[0] = arr[0]
+    for i in range(1, n):
+        prefixSum[i] = prefixSum[i-1] + arr[i]
+    return prefixSum
 
 def main():
     arr = [1,2,3,4,5]
