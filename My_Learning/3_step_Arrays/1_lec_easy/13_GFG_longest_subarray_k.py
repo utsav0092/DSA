@@ -26,7 +26,7 @@
 
 #---------------------------------------------------
 
-'''Better apraoch (prefixsum)'''
+'''Better apraoch (prefixsum algorithm)'''
 '''tc - O() and sc - O()'''
 
 def subArray(arr, k):
