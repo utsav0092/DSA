@@ -41,7 +41,7 @@ def main():
 if __name__ == "__main__":
     main()
 
-'''Better solution (hasing)'''
+'''Better solution (with map)'''
 '''tc - O(n) and sc - O(n)'''
 
 def twoSum(nums, target):
@@ -58,6 +58,31 @@ def main():
     nums = [1,2,3,4,5]
     target = 9
     print(twoSum(nums, target))
+
+if __name__ == "__main__":
+    main()
+
+'''Optimal appraoch (two pointer)'''
+'''tc - O(n) / O(nlogn) for sorting and sc - O(1)'''
+
+def twoSum(target, nums):
+    n = len(nums)
+    i = 0
+    j = n-1
+    nums.sort()
+    while (i < j):
+        if nums[i] + nums[j] == target:
+            # return [i, j]
+            return [nums[i], nums[j]]
+        elif nums[i] + nums[j] > target:
+            j -= 1
+        else:
+            i += 1
+    return -1
+def main():
+    nums = [1,2,3,4,5]
+    target = 9
+    print(twoSum(target, nums))
 
 if __name__ == "__main__":
     main()
