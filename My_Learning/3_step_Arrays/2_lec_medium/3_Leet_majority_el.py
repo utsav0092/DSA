@@ -44,15 +44,51 @@
 # if __name__ == "__main__":
 #     main()
 
-'''Optimised solution (Moose's voring algorithm)'''
-'''tc - O() and sc - O()'''
+'''Better solution (using Counter)'''
+'''tc - O(n) and sc - O(n)'''
 
-def major(arr):
-    return arr
+# from collections import Counter
 
-def main():
-    arr = [1,2,2,2,2]
-    print(major(arr))
+# def major(arr):
+#     n = len(arr)
+#     count = Counter(arr)
+#     for key, val in count.items():
+#         if val > n//2:
+#             return key
+#     return -1
 
-if __name__ == "__main__":
-    main()
+# arr = [1,1,1,1,2,3]
+# print(major(arr))
+
+'''Optimised solution (Moore's voting algorithm)'''
+'''tc - O(n) and sc - O(1)'''
+
+# def major(arr):
+#     n = len(arr)
+#     count = 0
+#     c = 0
+
+#     for i in range(n):
+#         if count == 0:
+#             count = 1
+#             el = arr[i]
+#         elif arr[i] == el:
+#             count += 1
+#         else:
+#             count -= 1
+
+#     for j in range(n):
+#         if arr[j] == el:
+#             c += 1
+
+#     if c > n//2:
+#         return el
+#     else:
+#         return -1
+
+# def main():
+#     arr = [1,3,3,3,3,3,3,3,4,5,4,3]
+#     print(major(arr))
+
+# if __name__ == "__main__":
+#     main()
