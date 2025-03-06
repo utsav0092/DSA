@@ -38,6 +38,12 @@ def Smax(arr):
             slarge = arr[i]
     return slarge
 
+arr = list(map(int, input("Enter your values: ").split()))
+print(f"Smax: {Smax(arr)}")
+
+'''Find the second min element in array with sort'''
+'''TC = O(n) and SC = O(n)'''
+
 def Smin(arr):
     Small = arr[0]
     SSmall = 1000
@@ -49,5 +55,4 @@ def Smin(arr):
     return SSmall  
   
 arr = list(map(int, input("Enter your values: ").split()))
-print(f"Smax: {Smax(arr)}")
 print(f"Smin: {Smin(arr)}")
