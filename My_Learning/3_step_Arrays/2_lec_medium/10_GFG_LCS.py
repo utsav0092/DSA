@@ -56,7 +56,7 @@
 #     main()
 
 '''Optimal solution using set()'''
-'''tc - O(n) and sc - O(n)'''
+'''tc - O(3n) and sc - O(n)'''
 
 # def LCSnum(arr):
 #     n = len(arr)
