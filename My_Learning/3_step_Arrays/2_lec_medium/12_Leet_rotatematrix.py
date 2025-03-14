@@ -29,13 +29,16 @@
 
 # def rotate(matrix):
 #     n = len(matrix)
+
 #     #transpose the matrix
 #     for i in range(n): # (n-1)
 #         for j in range(i+1, n):
 #             matrix[j][i], matrix[i][j] = matrix[i][j], matrix[j][i]
+
 #     #reverse in the matrix
 #     for i in matrix:
 #         i.reverse()
+
 #     return matrix
 
 # def main():
