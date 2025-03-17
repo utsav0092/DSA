@@ -62,20 +62,20 @@
 
 '''returns the maximun sum subarray [...]'''
 
-def kadane(arr):
-    n = len(arr)
-    maxSum = float('-inf')
-    currSum = 0
-    for i in range(n):
-        currSum += arr[i]
-        maxSum = max(maxSum, currSum)
-        if currSum < 0:
-            currSum = 0
-    return maxSum
+# def kadane(arr):
+#     n = len(arr)
+#     maxSum = float('-inf')
+#     currSum = 0
+#     for i in range(n):
+#         currSum += arr[i]
+#         maxSum = max(maxSum, currSum)
+#         if currSum < 0:
+#             currSum = 0
+#     return maxSum
 
-def main(): 
-    arr = [3,-4,5,4,-1,7,-8]
-    print(kadane(arr))
+# def main(): 
+#     arr = [3,-4,5,4,-1,7,-8]
+#     print(kadane(arr))
 
-if __name__ == "__main__":
-    main()
+# if __name__ == "__main__":
+#     main()
