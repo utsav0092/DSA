@@ -60,3 +60,22 @@
 
 # if __name__ == "__main__":
 #     main()
+
+
+'''-------------------------------------------------------------------------------------'''
+'''short solution'''
+
+# def subSum(arr, k):   
+#     d = {0: 1}
+#     cnt = sm = 0
+    
+#     for i in arr:
+#         sm += i
+#         cnt += d.get(sm - k, 0)  # Use .get() to avoid KeyError
+#         d[sm] = d.get(sm, 0) + 1  # Use .get() to handle missing keys
+
+#     return cnt
+
+# arr = [1, 2, 3, 4, 5, 6, 7]
+# k = 5
+# print(subSum(arr, k))
