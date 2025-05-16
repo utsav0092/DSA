@@ -27,30 +27,34 @@
 '''Better solution / in-place / transpose => reverse'''
 '''tc - O(n/2*n/2+n/2 = n^2) and sc - O(1)'''
 
-# def rotate(matrix):
-#     n = len(matrix)
+def rotate(matrix):
+    n = len(matrix)
 
-#     #transpose the matrix
-#     for i in range(n): # (n-1)
-#         for j in range(i+1, n):
-#             matrix[j][i], matrix[i][j] = matrix[i][j], matrix[j][i]
+    #transpose the matrix
+    for i in range(n): # (n-1)
+        for j in range(i+1, n):
+            matrix[j][i], matrix[i][j] = matrix[i][j], matrix[j][i]
 
-#     #reverse in the matrix
-#     for i in matrix:
-#         i.reverse()
+    #reverse in the matrix
+    for i in matrix:
+        i.reverse()
 
-#     return matrix
+    return matrix
 
-# def main():
-#     matrix = [[1, 2, 3, 4], 
-#               [5, 6, 7, 8], 
-#               [9, 10, 11, 12], 
-#               [13, 14, 15, 16]]
+def main():
+    # matrix = [[1,   2,  3,  4], 
+    #           [5,   6,  7,  8], 
+    #           [9,  10, 11, 12], 
+    #           [13, 14, 15, 16]]
+
+    matrix = [[1, 2, 3],
+              [4, 5, 6],
+              [7, 8 ,9]];
               
-#     result = rotate(matrix)
+    result = rotate(matrix)
 
-#     for row in result:  
-#         print(row)  
+    for row in result:  
+        print(row)  
 
-# if __name__ == "__main__":
-#     main()
+if __name__ == "__main__":
+    main()

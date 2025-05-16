@@ -26,6 +26,8 @@
 # if __name__ == "__main__":
 #     main()
 
+'''-----------------------------------------------------------------------------------------------------'''
+
 '''Better solution'''
 '''tc - O(nlogn) and sc - O(1)'''
 
@@ -55,33 +57,34 @@
 # if __name__ == "__main__":
 #     main()
 
+'''----------------------------------------------------------------------------------------------------------------------------------'''
+
 '''Optimal solution using set()'''
 '''tc - O(3n) and sc - O(n)'''
+def LCSnum(arr):
+    n = len(arr)
+    if n == 0: 
+        return -1
 
-# def LCSnum(arr):
-#     n = len(arr)
-#     if n == 0: 
-#         return -1
+    longest = 1
+    hash_set = set(arr) 
 
-#     longest = 1
-#     hash_set = set(arr) 
+    for i in hash_set:
+        if (i - 1) not in hash_set:  
+            current_count = 1
+            value = i
 
-#     for i in hash_set:
-#         if (i - 1) not in hash_set:  
-#             current_count = 1
-#             value = i
+            while (value + 1) in hash_set:  
+                value += 1
+                current_count += 1
 
-#             while (value + 1) in hash_set:  
-#                 value += 1
-#                 current_count += 1
+            longest = max(longest, current_count)
 
-#             longest = max(longest, current_count)
+    return longest
 
-#     return longest
+def main():
+    arr = [102, 4, 100, 1, 101, 3, 2, 1, 1]
+    print(LCSnum(arr)) 
 
-# def main():
-#     arr = [102, 4, 100, 1, 101, 3, 2, 1, 1]
-#     print(LCSnum(arr)) 
-
-# if __name__ == "__main__":
-#     main()
+if __name__ == "__main__":
+    main()

@@ -29,4 +29,4 @@ def permutation(arr):
     return arr  # Fix: Return the modified list
 
 arr = [1, 3, 2]
-print(permutation(arr))  # Output: [2, 1, 3]
+print(permutation(arr))  

@@ -113,10 +113,9 @@ def SMZ(arr):
     return arr
 
 def main():
-    matrix = [[1, 1, 1, 1], 
-              [1, 0, 1, 1], 
-              [1, 1, 0, 1],
-              [1, 1, 1, 1]]
+    matrix = [[1, 1, 1], 
+              [1, 0, 1], 
+              [1, 1, 1]]
 
     ans = SMZ(matrix)
 

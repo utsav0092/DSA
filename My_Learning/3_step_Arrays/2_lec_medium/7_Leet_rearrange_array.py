@@ -23,30 +23,33 @@
 # if __name__ == "__main__":
 #     main()
 
+'''-------------------------------------------------------------------------------------'''
+
 '''Better solution (2 pointers)'''
 '''tc - O(n) and sc - O(n)'''
 
-# def reArrange(arr):
-#     n = len(arr)
-#     new_arr = [0] * n
-#     pos = 0
-#     neg = 1
-#     for i in range(n):
-#         if arr[i] > 0:
-#             new_arr[pos] = arr[i]
-#             pos += 2
-#         else:
-#             new_arr[neg] = arr[i]
-#             neg += 2
-#     return new_arr
+def reArrange(arr):
+    n = len(arr)
+    new_arr = [0] * n
+    pos = 0
+    neg = 1
+    for i in range(n):
+        if arr[i] > 0:
+            new_arr[pos] = arr[i]
+            pos += 2
+        else:
+            new_arr[neg] = arr[i]
+            neg += 2
+    return new_arr
 
-# def main():
-#     arr = [-3, -2, 4, 5]
-#     print(reArrange(arr))
+def main():
+    arr = [-3, -2, 4, 5]
+    print(reArrange(arr))
 
-# if __name__ == "__main__":
-#     main()
+if __name__ == "__main__":
+    main()
 
+'''-----------------------------------------------------------------------------------------'''
 
 '''Varietion in this problem (no of pos != no of neg)'''
 '''tc - O(2n) (n + n/2) and sc - O(n)'''
