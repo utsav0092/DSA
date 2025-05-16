@@ -59,27 +59,27 @@
 '''Optimised apraoch for (positives and zeros) using (two pointers and greedyalgorithm)'''
 '''tc - O(2n) and sc - O(1)'''
 
-# def subArray(arr, k):
-#     n = len(arr)
-#     summ = 0
-#     maxlen = 0
-#     right = 0
-#     left = 0
-#     while (right < n):
-#         while (left <= right and summ > k):
-#             summ -= arr[left]
-#             left += 1
-#         if (summ == k):
-#             maxlen = max(maxlen, right - left + 1)
-#         right += 1
-#         if (right < n):
-#             summ += arr[right]
-#     return maxlen
+def subArray(arr, k):
+    n = len(arr)
+    summ = 0
+    maxlen = 0
+    right = 0
+    left = 0
+    while (right < n):
+        while (left <= right and summ > k):
+            summ -= arr[left]
+            left += 1
+        if (summ == k):
+            maxlen = max(maxlen, right - left + 1)
+        right += 1
+        if (right < n):
+            summ += arr[right]
+    return maxlen
 
-# def main():
-#     arr = [10, 5, 2, 7, 1, 10]
-#     k = 15
-#     print(f"The largest subarray values is: {subArray(arr, k)}") 
+def main():
+    arr = [10, 5, 2, 7, 1, 10]
+    k = 15
+    print(f"The largest subarray values is: {subArray(arr, k)}") 
 
-# if __name__ == "__main__":
-#     main()
+if __name__ == "__main__":
+    main()

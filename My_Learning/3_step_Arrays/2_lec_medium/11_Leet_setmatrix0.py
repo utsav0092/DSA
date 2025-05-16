@@ -78,54 +78,53 @@
 
 '''Optimal solution'''
 '''tc - O(n*m) and sc - O(1)'''
+def SMZ(arr):
+    n = len(arr)
+    m = len(arr[0])
+    col = 1
 
-# def SMZ(arr):
-#     n = len(arr)
-#     m = len(arr[0])
-#     col = 1
-
-#     '''mark rows and col that should be zero'''
-#     for i in range(n):
-#         for j in range(m):
-#             if arr[i][j] == 0:
-#                 arr[i][0] = 0
-#                 if j != 0:
-#                     arr[0][j] = 0
-#                 else:
-#                     col = 0
+    '''mark rows and col that should be zero'''
+    for i in range(n):
+        for j in range(m):
+            if arr[i][j] == 0:
+                arr[i][0] = 0
+                if j != 0:
+                    arr[0][j] = 0
+                else:
+                    col = 0
     
-#     '''update the matrix using markers except first rows and colums'''
-#     for i in range(1, n):
-#         for j in range(1, m):
-#             if arr[i][j] != 0:
-#                 if arr[0][j] == 0 or arr[i][0] == 0:
-#                     arr[i][j] = 0
+    '''update the matrix using markers except first rows and colums'''
+    for i in range(1, n):
+        for j in range(1, m):
+            if arr[i][j] != 0:
+                if arr[0][j] == 0 or arr[i][0] == 0:
+                    arr[i][j] = 0
     
-#     '''zero out the first row if needed'''
-#     if arr[0][0] == 0:
-#         for j in range(m):
-#             arr[0][j] = 0
+    '''zero out the first row if needed'''
+    if arr[0][0] == 0:
+        for j in range(m):
+            arr[0][j] = 0
     
-#     '''zero out the first column if needed'''
-#     if col == 0:
-#         for i in range(n):
-#             arr[i][0] = 0
+    '''zero out the first column if needed'''
+    if col == 0:
+        for i in range(n):
+            arr[i][0] = 0
 
-#     return arr
+    return arr
 
-# def main():
-#     matrix = [[1, 1, 1, 1], 
-#               [1, 0, 1, 1], 
-#               [1, 1, 0, 1],
-#               [1, 1, 1, 1]]
+def main():
+    matrix = [[1, 1, 1, 1], 
+              [1, 0, 1, 1], 
+              [1, 1, 0, 1],
+              [1, 1, 1, 1]]
 
-#     ans = SMZ(matrix)
+    ans = SMZ(matrix)
 
-#     print("The Final matrix is:")
-#     for row in ans:
-#         for ele in row:
-#             print(ele, end=" ")
-#         print()
+    print("The Final matrix is:")
+    for row in ans:
+        for ele in row:
+            print(ele, end=" ")
+        print()
 
-# if __name__ == "__main__":
-#     main()  
+if __name__ == "__main__":
+    main()  

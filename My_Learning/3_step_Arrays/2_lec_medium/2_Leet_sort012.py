@@ -51,25 +51,25 @@
 '''
 '''tc - O(n) and sc - O(1)'''
 
-# def arrange(nums):
-#     n = len(nums)
-#     low = 0
-#     mid = 0
-#     high = n-1
-#     while (mid <= high):
-#         if (nums[mid] == 0):
-#             nums[low], nums[mid] = nums[mid], nums[low]
-#             mid += 1
-#             low += 1
-#         elif (nums[mid] == 1):
-#             mid += 1
-#         elif (nums[mid] == 2):
-#             nums[high], nums[mid] = nums[mid], nums[high]
-#             high -= 1
-#     return nums
-# def main():
-#     nums = [0,0,2,2,1,1,2,0,2,1,0,0]
-#     print(arrange(nums))
+def arrange(nums):
+    n = len(nums)
+    low = 0
+    mid = 0
+    high = n-1
+    while (mid <= high):
+        if (nums[mid] == 0):
+            nums[low], nums[mid] = nums[mid], nums[low]
+            mid += 1
+            low += 1
+        elif (nums[mid] == 1):
+            mid += 1
+        elif (nums[mid] == 2):
+            nums[high], nums[mid] = nums[mid], nums[high]
+            high -= 1
+    return nums
+def main():
+    nums = [0,0,2,2,1,1,2,0,2,1,0,0]
+    print(arrange(nums))
 
-# if __name__ == "__main__":
-#     main()  
+if __name__ == "__main__":
+    main()  
