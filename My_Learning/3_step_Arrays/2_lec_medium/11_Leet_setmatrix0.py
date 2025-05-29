@@ -1,6 +1,6 @@
 '''Leetcode - Set Matrix Zero (column wise and row wise)'''
 '''Brute force'''
-'''tc - O(n*m * (n+m)) and sc - O()'''
+'''tc - O(n*m * (n+m)) and sc - O())'''
 
 # def SMZ(arr):
 #     n = len(arr)

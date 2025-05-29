@@ -1,12 +1,12 @@
 '''Find the max element in the array'''
 '''With sorting'''
 
-def findMax(arr):
-    arr.sort()
-    return arr[-1]
+# def findMax(arr):
+#     arr.sort()
+#     return arr[-1]
 
-arr = list(map(int, input().split()))
-print(f"Max Element is: {findMax(arr)}")
+# arr = list(map(int, input().split()))
+# print(f"Max Element is: {findMax(arr)}")
 
 '''Without using sort'''
 

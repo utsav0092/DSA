@@ -1,19 +1,19 @@
-'''Leetcode - Check if the array is sorted or nont'''
+'''Leetcode - Check if the array is sorted or not'''
 '''TC = O(n) and SC = O(n) (my approch)'''
 
-def if_Sorted(arr):
-    i = 0
-    j = i + 1
-    while (j < len(arr)):
-        if (arr[i] < arr[j]):
-            i += 1
-            j += 1
-        else:
-            return False
-    return True
+# def if_Sorted(arr):
+#     i = 0
+#     j = i + 1
+#     while (j < len(arr)):
+#         if (arr[i] < arr[j]):
+#             i += 1
+#             j += 1
+#         else:
+#             return False
+#     return True
 
-arr = list(map(int, input("Enter values: ").split()))
-print(if_Sorted(arr))
+# arr = list(map(int, input("Enter values: ").split()))
+# print(if_Sorted(arr))
 
 '''Stiver code'''
 
